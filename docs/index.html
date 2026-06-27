@@ -1,67 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Alexis Ayala</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: black;
-      color: white;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
 
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #111, #222);
+}
 
-    h1 {
-      font-size: 60px;
-      margin: 0;
-    }
+h1 { font-size: 40px; margin: 0; }
+h2 { color: #ccc; font-weight: normal; }
 
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
+.contato p {
+  margin: 5px 0;
+  color: #aaa;
+}
 
-    h2 {
-      color: #f5c542;
-    }
-  </style>
-</head>
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
 
-<body>
+section {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
 
-<header>
-  <h1>Alexis Ayala</h1>
-  <p>Artista Circense • Dança • Aéreos • Formação • Gestão Cultural</p>
-</header>
+h3 {
+  color: #ffcc66;
+}
 
-<section>
-  <h2>REPTAR</h2>
-  <p>Espetáculo de circo contemporâneo que integra corpo, risco e meio ambiente.</p>
-</section>
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
 
-<section>
-  <h2>Trajetória</h2>
-  <p>
-    Artista chileno residente em Salvador (BA), atuando entre circo contemporâneo,
-    dança, pesquisa de movimento e gestão cultural.
-  </p>
-</section>
+.lang-switch button {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
 
-<section>
-  <h2>Contato</h2>
-  <p>Instagram | WhatsApp | Email</p>
-</section>
-
-</body>
-</html>
+.lang-switch button:hover {
+  background: #333;
+}
