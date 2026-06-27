@@ -1,55 +1,91 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEXIS AYALA | Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #111, #222);
-}
+<body>
 
-h1 { font-size: 40px; margin: 0; }
-h2 { color: #ccc; font-weight: normal; }
+<header class="hero">
 
-.contato p {
-  margin: 5px 0;
-  color: #aaa;
-}
+  <div class="lang-switch">
+    <button onclick="setLang('pt')">PT</button>
+    <button onclick="setLang('es')">ES</button>
+  </div>
 
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px;
-}
+  <h1>ALEXIS AYALA</h1>
+  <h2 data-pt="Artista Circense | Dançarino | Gestor Cultural"
+      data-es="Artista Circense | Bailarín | Gestor Cultural">
+  </h2>
 
-section {
-  margin-bottom: 40px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 20px;
-}
+  <div class="contato">
+    <p>📧 alexisayala.circo@gmail.com</p>
+    <p>📞 +55 (71) 98477-6178</p>
+    <p>📍 Salvador - BA, Brasil</p>
+  </div>
+</header>
 
-h3 {
-  color: #ffcc66;
-}
+<main>
 
-.lang-switch {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
+<section>
+  <h3 data-pt="Perfil Profissional" data-es="Perfil Profesional"></h3>
 
-.lang-switch button {
-  background: #222;
-  color: #fff;
-  border: 1px solid #444;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin-left: 5px;
-}
+  <p data-pt="Artista chileno, residente em Salvador-BA desde 2019, com atuação em circo contemporâneo, dança e performance. Especialista em acrobacia aérea (tecido e faixas aéreas) e dança acrobática, com trajetória integrada entre criação artística, interpretação, formação e gestão cultural."
+     data-es="Artista chileno residente en Salvador-BA desde 2019, con actuación en circo contemporáneo, danza y performance. Especialista en acrobacia aérea (tela y cintas aéreas) y danza acrobática, con trayectoria integrada entre creación artística, interpretación, formación y gestión cultural.">
+  </p>
+</section>
 
-.lang-switch button:hover {
-  background: #333;
+<section>
+  <h3 data-pt="Formação Profissional" data-es="Formación Profesional"></h3>
+  <ul>
+    <li>Técnico em Dança – FUNCEB (2019–2024)</li>
+    <li>Artista Circense – El Circo del Mundo (2014–2016)</li>
+    <li>Engenharia Agronômica – Chile (2007–2013)</li>
+  </ul>
+</section>
+
+<section>
+  <h3 data-pt="Espetáculos" data-es="Espectáculos"></h3>
+  <ul>
+    <li>REPTAR – Sinestesia Companhia</li>
+    <li>POR ACASO – Cia. Circonstance</li>
+    <li>CRISTAL E SEUS AMIGOS</li>
+    <li>À RISCA – Cia. Encontro Dança e Circo</li>
+  </ul>
+</section>
+
+<section>
+  <h3 data-pt="Residências Artísticas" data-es="Residencias Artísticas"></h3>
+  <p data-pt="Participação em residências no Brasil, Chile e projetos internacionais como IBERESCENA."
+     data-es="Participación en residencias en Brasil, Chile y proyectos internacionales como IBERESCENA.">
+  </p>
+</section>
+
+<section>
+  <h3 data-pt="Gestão Cultural" data-es="Gestión Cultural"></h3>
+  <ul>
+    <li>Espaço Núcleo de Circo – Salvador</li>
+    <li>Festival Circo em Movimento</li>
+    <li>Encontro Dança e Circo</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>© Alexis Ayala</p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll("[data-pt]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
 }
+</script>
+
+</body>
+</html>
