@@ -13,7 +13,7 @@ body {
 }
 
 /* =========================
-   MENU FIXO (ESQUERDA + DIREITA)
+   MENU FIXO (NOME ESQUERDA + MENU DIREITA)
 ========================= */
 
 header {
@@ -23,32 +23,36 @@ header {
     width: 100%;
     background-color: rgba(15, 15, 15, 0.95);
     backdrop-filter: blur(10px);
+
     display: flex;
-    justify-content: space-between; /* chave aqui */
+    justify-content: space-between;
     align-items: center;
-    padding: 12px 30px;
+    flex-wrap: wrap;
+
+    padding: 12px 25px;
     border-bottom: 1px solid #222;
     z-index: 999;
 }
 
-/* NOME À ESQUERDA */
-
+/* NOME ESQUERDA */
 header h1 {
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 400;
     margin: 0;
+    white-space: nowrap;
 }
 
-/* MENU À DIREITA */
-
+/* MENU DIREITA */
 nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 18px;
+    gap: 14px;
+    max-width: 100%;
 }
 
+/* LINKS */
 nav a {
     text-decoration: none;
     color: #f5f3ee;
@@ -99,7 +103,6 @@ section {
 }
 
 /* BOTÃO REPTAR */
-
 .button {
     display: inline-block;
     margin-top: 25px;
@@ -168,6 +171,7 @@ header {
 
 nav {
     gap: 10px;
+    justify-content: center;
 }
 
 nav a {
