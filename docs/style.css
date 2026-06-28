@@ -1,6 +1,6 @@
 
 /* =========================
-   BASE GERAL
+   BASE
 ========================= */
 
 body {
@@ -9,11 +9,11 @@ body {
     background-color: #0f0f0f;
     color: #f5f3ee;
     line-height: 1.6;
-    padding-top: 80px;
+    padding-top: 110px; /* espaço maior para header em 2 linhas */
 }
 
 /* =========================
-   MENU FIXO (NOME ESQUERDA + MENU DIREITA)
+   HEADER (NOME + MENU EM DUAS LINHAS)
 ========================= */
 
 header {
@@ -23,31 +23,28 @@ header {
     width: 100%;
     background-color: rgba(15, 15, 15, 0.95);
     backdrop-filter: blur(10px);
-
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-
-    padding: 12px 25px;
+    padding: 10px 15px;
     border-bottom: 1px solid #222;
     z-index: 999;
 }
 
-/* NOME ESQUERDA */
+/* NOME */
 header h1 {
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 400;
-    margin: 0;
+    margin: 5px 0;
     white-space: nowrap;
 }
 
-/* MENU DIREITA */
+/* MENU */
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 14px;
     max-width: 100%;
 }
@@ -77,11 +74,11 @@ section {
 }
 
 /* =========================
-   HOME (HERO)
+   HERO
 ========================= */
 
 .hero {
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 110px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +99,7 @@ section {
     opacity: 0.7;
 }
 
-/* BOTÃO REPTAR */
+/* BOTÃO */
 .button {
     display: inline-block;
     margin-top: 25px;
@@ -120,7 +117,7 @@ section {
 }
 
 /* =========================
-   TÍTULOS
+   TIPOGRAFIA
 ========================= */
 
 h2 {
@@ -165,25 +162,20 @@ a:hover {
 
 @media (max-width: 768px) {
 
-header {
-    padding: 10px 15px;
-}
-
-nav {
-    gap: 10px;
-    justify-content: center;
-}
-
-nav a {
-    font-size: 11px;
-}
-
 .hero h2 {
     font-size: 32px;
 }
 
 section {
     padding: 60px 20px;
+}
+
+nav {
+    gap: 10px;
+}
+
+nav a {
+    font-size: 11px;
 }
 
 }
