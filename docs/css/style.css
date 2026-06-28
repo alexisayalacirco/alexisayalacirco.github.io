@@ -1,1 +1,196 @@
+/* =====================================
+   RESET
+===================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================
+   GERAL
+===================================== */
+
+body {
+    background-color: #111;
+    color: #f5f3ee;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.95);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 40px;
+
+    border-bottom: 1px solid #2a2a2a;
+
+    z-index: 1000;
+}
+
+/* Nome */
+
+header h1 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+   MENU
+===================================== */
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: #f5f3ee;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+nav a:hover {
+    color: #bbbbbb;
+}
+
+/* =====================================
+   CONTEÚDO DAS PÁGINAS
+===================================== */
+
+.page {
+    max-width: 900px;
+    margin: auto;
+
+    padding-top: 120px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+}
+
+/* =====================================
+   TÍTULOS
+===================================== */
+
+h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 45px;
+    margin-bottom: 18px;
+}
+
+/* =====================================
+   TEXTO
+===================================== */
+
+p {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+
+.intro {
+    font-size: 22px;
+}
+
+/* =====================================
+   LISTAS
+===================================== */
+
+ul {
+    margin-top: 20px;
+    margin-left: 22px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   VÍDEO
+===================================== */
+
+video {
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
+
+/* =====================================
+   BOTÃO (PDF)
+===================================== */
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 24px;
+
+    color: #f5f3ee;
+
+    text-decoration: none;
+
+    border: 1px solid #f5f3ee;
+
+    transition: .3s;
+}
+
+.button:hover {
+    background: #f5f3ee;
+    color: #111;
+}
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .page {
+        padding-top: 170px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+}
