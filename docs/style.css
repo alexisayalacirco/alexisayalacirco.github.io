@@ -28,12 +28,12 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 12px 20px 12px 25px;
+    padding: 12px 35px 12px 20px; /* 👈 ajuste: mais espaço à direita */
     border-bottom: 1px solid #222;
     z-index: 999;
 }
 
-/* NOME (ESQUERDA) */
+/* NOME ESQUERDA */
 
 header h1 {
     font-size: 13px;
@@ -43,7 +43,7 @@ header h1 {
     white-space: nowrap;
 }
 
-/* MENU (DIREITA, MAS MAIS PARA A ESQUERDA) */
+/* MENU DIREITA */
 
 nav {
     display: flex;
@@ -51,7 +51,7 @@ nav {
     justify-content: flex-end;
     gap: 12px;
 
-    margin-right: 15px; /* 👈 isso puxa o menu levemente para a esquerda */
+    margin-right: 30px; /* 👈 empurra o menu um pouco para a esquerda */
 }
 
 /* LINKS */
@@ -105,7 +105,7 @@ section {
     opacity: 0.7;
 }
 
-/* BOTÃO */
+/* BOTÃO REPTAR */
 
 .button {
     display: inline-block;
@@ -174,7 +174,7 @@ header {
 }
 
 nav {
-    gap: 8px;
+    gap: 10px;
     margin-right: 0;
     justify-content: center;
 }
