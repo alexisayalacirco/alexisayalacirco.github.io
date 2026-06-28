@@ -202,10 +202,17 @@ video {
     flex: 1;
 }
 
+.hero-video {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-video video {
     width: 100%;
-    max-width: 420px;
-    max-height: 320px;
+    max-width: 320px;
+    max-height: 240px;
     object-fit: cover;
     border-radius: 2px;
     opacity: 0.95;
