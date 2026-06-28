@@ -17,6 +17,7 @@ body {
     color: #f5f3ee;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 /* =====================================
@@ -70,140 +71,62 @@ nav a:hover {
 }
 
 /* =====================================
-   CONTEÚDO DAS PÁGINAS
+   HOME / HERO (TELA ÚNICA)
 ===================================== */
 
-.page {
-    max-width: 900px;
-    margin: auto;
-
-    padding-top: 120px;
-    padding-right: 40px;
-    padding-bottom: 80px;
-    padding-left: 40px;
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
 }
 
-/* =====================================
-   TÍTULOS
-===================================== */
-
-h2 {
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
-
-h3 {
-    font-size: 24px;
-    font-weight: 300;
-    margin-top: 45px;
-    margin-bottom: 18px;
+/* evita sobreposição do header */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+    margin-top: 80px;
 }
 
 /* =====================================
    TEXTO
 ===================================== */
 
-p {
-    margin-bottom: 22px;
-    font-size: 18px;
-}
-
-.intro {
-    font-size: 22px;
-}
-
-/* =====================================
-   LISTAS
-===================================== */
-
-ul {
-    margin-top: 20px;
-    margin-left: 22px;
-}
-
-li {
-    margin-bottom: 12px;
-}
-
-/* =====================================
-   VÍDEO (GERAL)
-===================================== */
-
-video {
-    width: 100%;
-    display: block;
-    margin-top: 40px;
-}
-
-/* =====================================
-   BOTÃO (PDF)
-===================================== */
-
-.button {
-    display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 14px 24px;
-
-    color: #f5f3ee;
-
-    text-decoration: none;
-
-    border: 1px solid #f5f3ee;
-
-    transition: .3s;
-}
-
-.button:hover {
-    background: #f5f3ee;
-    color: #111;
-}
-
-/* =====================================
-   HOME / HERO (NOVO LAYOUT)
-===================================== */
-
-.home {
-    max-width: 100%;
-    padding: 140px 40px 80px 40px;
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-/* TEXTO */
-
 .hero-text {
     flex: 1;
-    max-width: 480px;
+    max-width: 420px;
 }
+
+/* 2 níveis de texto apenas */
 
 .hero-text .intro {
     font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.hero-text p {
-    font-size: 17px;
     line-height: 1.6;
-    opacity: 0.95;
+    margin-bottom: 20px;
+    font-weight: normal;
 }
 
-/* VÍDEO CONTROLADO */
+.hero-text .manifesto {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-weight: normal;
+}
+
+/* remove negrito herdado */
+.hero-text strong {
+    font-weight: normal;
+}
+
+/* =====================================
+   VÍDEO
+===================================== */
 
 .hero-video {
     flex: 1;
-}
-
-.hero-video {
-    flex: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,11 +134,10 @@ video {
 
 .hero-video video {
     width: 100%;
-    max-width: 320px;
-    max-height: 240px;
+    max-width: 520px;
+    max-height: 380px;
     object-fit: cover;
     border-radius: 2px;
-    opacity: 0.95;
 }
 
 /* =====================================
@@ -236,37 +158,27 @@ video {
         gap: 15px;
     }
 
-    .page {
-        padding-top: 170px;
-        padding-left: 25px;
-        padding-right: 25px;
+    .home {
+        height: auto;
+        padding: 120px 25px 40px 25px;
     }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    p {
-        font-size: 17px;
-    }
-
-    /* HOME MOBILE */
 
     .hero {
         flex-direction: column;
-        gap: 25px;
+        gap: 30px;
+        margin-top: 0;
     }
 
     .hero-video video {
         max-width: 100%;
-        max-height: 260px;
+        max-height: 280px;
     }
 
     .hero-text .intro {
         font-size: 18px;
     }
 
-    .hero-text p {
-        font-size: 16px;
+    .hero-text .manifesto {
+        font-size: 15px;
     }
 }
