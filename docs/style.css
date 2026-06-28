@@ -5,15 +5,15 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     background-color: #0f0f0f;
     color: #f5f3ee;
     line-height: 1.6;
-    padding-top: 80px;
 }
 
 /* =========================
-   HEADER (UMA LINHA)
+   HEADER
 ========================= */
 
 header {
@@ -28,40 +28,34 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 12px 35px 12px 20px; /* 👈 ajuste: mais espaço à direita */
+    padding: 12px 30px;
     border-bottom: 1px solid #222;
     z-index: 999;
 }
 
-/* NOME ESQUERDA */
+/* NOME */
 
 header h1 {
     font-size: 13px;
-    letter-spacing: 2px;
     font-weight: 400;
+    letter-spacing: 2px;
     margin: 0;
     white-space: nowrap;
 }
 
-/* MENU DIREITA */
+/* MENU */
 
 nav {
     display: flex;
+    gap: 14px;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 12px;
-
-    margin-right: 30px; /* 👈 empurra o menu um pouco para a esquerda */
 }
-
-/* LINKS */
 
 nav a {
     text-decoration: none;
     color: #f5f3ee;
     font-size: 12px;
     letter-spacing: 1px;
-    white-space: nowrap;
     transition: 0.3s;
 }
 
@@ -70,42 +64,53 @@ nav a:hover {
 }
 
 /* =========================
-   SEÇÕES
+   CONTEÚDO
 ========================= */
 
-section {
-    padding: 80px 40px;
-    max-width: 1000px;
+.page {
+    max-width: 900px;
     margin: auto;
+    padding: 120px 40px 80px 40px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* TÍTULOS */
 
-.hero {
-    min-height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.hero h2 {
-    font-size: 48px;
+h2 {
+    font-size: 30px;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
-.hero p {
-    font-size: 16px;
-    opacity: 0.7;
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
-/* BOTÃO REPTAR */
+/* TEXTO */
+
+p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    opacity: 0.95;
+}
+
+/* LISTAS */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   BOTÃO
+========================= */
 
 .button {
     display: inline-block;
@@ -121,34 +126,6 @@ section {
 .button:hover {
     background-color: #7a2e3a;
     color: #0f0f0f;
-}
-
-/* =========================
-   TIPOGRAFIA
-========================= */
-
-h2 {
-    font-weight: 300;
-    font-size: 28px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-h3 {
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-/* =========================
-   LISTAS
-========================= */
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
 }
 
 /* =========================
@@ -175,20 +152,14 @@ header {
 
 nav {
     gap: 10px;
-    margin-right: 0;
-    justify-content: center;
 }
 
-nav a {
-    font-size: 11px;
+.page {
+    padding: 110px 20px 60px 20px;
 }
 
-.hero h2 {
-    font-size: 32px;
-}
-
-section {
-    padding: 60px 20px;
+h2 {
+    font-size: 24px;
 }
 
 }
