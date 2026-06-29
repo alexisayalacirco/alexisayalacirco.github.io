@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
    margin: 0;
@@ -12,10 +13,7 @@ body {
    line-height: 1.7;
 }
 
-/* =========================
-   HEADER FIXO
-========================= */
-
+/* HEADER */
 header {
    position: fixed;
    top: 0;
@@ -55,10 +53,7 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* =========================
-   PÁGINAS INTERNAS
-========================= */
-
+/* PÁGINAS INTERNAS */
 .page {
    max-width: 900px;
    margin: auto;
@@ -105,7 +100,7 @@ p {
 }
 
 /* =========================
-   HOME (VIDEOBACKGROUND)
+   HOME SIMPLES E ESTÁVEL
 ========================= */
 
 .home {
@@ -127,28 +122,24 @@ p {
    height: 100%;
    object-fit: cover;
    object-position: center;
-   filter: brightness(0.65) contrast(1.05);
 }
 
-/* OVERLAY */
+/* OVERLAY LEVE */
 .home::before {
    content: "";
    position: absolute;
    inset: 0;
    z-index: 2;
-   background: linear-gradient(
-      to right,
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.15)
-   );
+   background: rgba(0,0,0,0.4);
 }
 
-/* TEXTO DA HOME */
+/* TEXTO MAIS BAIXO (VERSÃO ORIGINAL SIMPLES) */
 .hero-text {
    position: absolute;
    z-index: 3;
-   top: 20vh;
+   top: 45%;
    left: 60px;
+   transform: translateY(-50%);
    max-width: 600px;
 }
 
@@ -163,51 +154,7 @@ p {
    margin-top: 15px;
 }
 
-/* =========================
-   SOBRE COM FUNDO
-========================= */
-
-.sobre-bg {
-   max-width: 900px;
-   margin: auto;
-   padding: 120px 40px 80px 40px;
-
-   background-image: url("../img/imagem2.jpg");
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-
-   position: relative;
-}
-
-.sobre-bg::before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   background: rgba(0,0,0,0.65);
-   z-index: 1;
-}
-
-.sobre-bg h2,
-.sobre-bg p {
-   position: relative;
-   z-index: 2;
-}
-
-.sobre-bg p {
-   font-size: 18px;
-   margin-bottom: 22px;
-}
-
-.sobre-bg .intro {
-   font-size: 22px;
-   line-height: 1.6;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
+/* RESPONSIVO */
 @media (max-width: 900px) {
 
    header {
@@ -237,7 +184,7 @@ p {
    }
 
    .hero-text {
-      top: 18vh;
+      top: 45%;
       left: 25px;
       right: 25px;
    }
