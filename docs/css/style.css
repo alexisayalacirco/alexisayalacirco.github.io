@@ -1,11 +1,9 @@
-/* RESET */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
-/* BODY */
 body {
    background-color: #111;
    color: #f5f3ee;
@@ -55,19 +53,18 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE CONTAINER */
+/* PAGE */
 .page {
    max-width: 900px;
    margin: auto;
    padding: 120px 40px 80px 40px;
 }
 
-/* TITLES */
+/* TEXTOS */
 h2 {
    font-size: 40px;
    font-weight: 300;
    margin-bottom: 40px;
-   letter-spacing: 0.5px;
 }
 
 h3 {
@@ -77,7 +74,6 @@ h3 {
    margin-bottom: 18px;
 }
 
-/* TEXT */
 p {
    margin-bottom: 22px;
    font-size: 18px;
@@ -88,7 +84,7 @@ p {
    line-height: 1.6;
 }
 
-/* LISTS */
+/* LISTAS */
 ul {
    margin-left: 22px;
    margin-top: 20px;
@@ -98,14 +94,7 @@ li {
    margin-bottom: 12px;
 }
 
-/* VIDEO PADRÃO */
-video {
-   width: 100%;
-   display: block;
-   margin-top: 40px;
-}
-
-/* BUTTON */
+/* BOTÃO */
 .button {
    display: inline-block;
    margin-top: 30px;
@@ -121,27 +110,31 @@ video {
    color: #111;
 }
 
+/* VIDEO PADRÃO */
+video {
+   width: 100%;
+   display: block;
+   margin-top: 40px;
+}
+
 /* =========================
-   HOME / HERO CINEMATOGRÁFICO
+   HOME / HERO
 ========================= */
 
 .home {
    width: 100%;
-   height: 90vh; /* ajustado */
-   overflow: hidden;
+   height: 70vh; /* 🔥 reduzido de verdade */
    position: relative;
+   overflow: hidden;
 }
 
 .hero {
    width: 100%;
-   height: 90vh; /* ajustado */
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+   height: 70vh; /* 🔥 reduzido de verdade */
    position: relative;
 }
 
-/* TEXTO SOBRE O VÍDEO */
+/* TEXTO */
 .hero-text {
    position: absolute;
    z-index: 2;
@@ -149,7 +142,6 @@ video {
    padding: 120px 60px;
 }
 
-/* INTRO */
 .hero-text .intro {
    font-size: 28px;
    font-weight: 300;
@@ -157,7 +149,6 @@ video {
    margin-bottom: 20px;
 }
 
-/* MANIFESTO */
 .hero-text .manifesto {
    font-size: 18px;
    font-weight: 300;
@@ -165,13 +156,13 @@ video {
    max-width: 450px;
 }
 
-/* VÍDEO FUNDO */
+/* VÍDEO */
 .hero-video {
-   width: 100%;
-   height: 100%;
    position: absolute;
    top: 0;
    left: 0;
+   width: 100%;
+   height: 100%;
    z-index: 1;
 }
 
