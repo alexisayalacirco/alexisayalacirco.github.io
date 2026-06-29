@@ -122,10 +122,12 @@ li {
    VÍDEO
 ===================================== */
 
-video {
-   width: 100%;
-   display: block;
-   margin-top: 40px;
+.hero-video video {
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+
+    max-width: 750px;
 }
 
 /* =====================================
