@@ -1,3 +1,4 @@
+/* RESET */
 * {
    margin: 0;
    padding: 0;
@@ -11,7 +12,10 @@ body {
    line-height: 1.7;
 }
 
-/* HEADER */
+/* =========================
+   HEADER FIXO
+========================= */
+
 header {
    position: fixed;
    top: 0;
@@ -51,7 +55,10 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE */
+/* =========================
+   PÁGINAS INTERNAS
+========================= */
+
 .page {
    max-width: 900px;
    margin: auto;
@@ -98,7 +105,7 @@ p {
 }
 
 /* =========================
-   HOME FINAL (ESTÁVEL)
+   HOME (VIDEOBACKGROUND)
 ========================= */
 
 .home {
@@ -136,15 +143,13 @@ p {
    );
 }
 
-/* TEXTO FORÇADO (AGORA VAI SUBIR DE VERDADE) */
+/* TEXTO DA HOME */
 .hero-text {
-   position: absolute !important;
-   z-index: 9999 !important;
-
-   top: 80px !important;   /* 🔥 MAIS ALTO FIXO */
-   left: 60px !important;
-
-   max-width: 600px !important;
+   position: absolute;
+   z-index: 3;
+   top: 20vh;
+   left: 60px;
+   max-width: 600px;
 }
 
 .hero-text .intro {
@@ -158,7 +163,51 @@ p {
    margin-top: 15px;
 }
 
-/* RESPONSIVO */
+/* =========================
+   SOBRE COM FUNDO
+========================= */
+
+.sobre-bg {
+   max-width: 900px;
+   margin: auto;
+   padding: 120px 40px 80px 40px;
+
+   background-image: url("../img/imagem2.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+   position: relative;
+}
+
+.sobre-bg::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(0,0,0,0.65);
+   z-index: 1;
+}
+
+.sobre-bg h2,
+.sobre-bg p {
+   position: relative;
+   z-index: 2;
+}
+
+.sobre-bg p {
+   font-size: 18px;
+   margin-bottom: 22px;
+}
+
+.sobre-bg .intro {
+   font-size: 22px;
+   line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
 @media (max-width: 900px) {
 
    header {
@@ -188,9 +237,9 @@ p {
    }
 
    .hero-text {
-      top: 60px !important;
-      left: 25px !important;
-      right: 25px !important;
+      top: 18vh;
+      left: 25px;
+      right: 25px;
    }
 
    .hero-text .intro {
@@ -200,46 +249,4 @@ p {
    .hero-text .manifesto {
       font-size: 16px;
    }
-}
-
-
-/* SOBRE COM FUNDO DE IMAGEM */
-.sobre-bg {
-   max-width: 900px;
-   margin: auto;
-   padding: 120px 40px 80px 40px;
-
-   background-image: url("../img/imagem2.jpg");
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-
-   position: relative;
-}
-
-/* overlay escuro para leitura */
-.sobre-bg::before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   background: rgba(0,0,0,0.65);
-   z-index: 1;
-}
-
-/* garantir texto acima */
-.sobre-bg h2,
-.sobre-bg p {
-   position: relative;
-   z-index: 2;
-}
-
-/* ajuste visual do texto */
-.sobre-bg p {
-   font-size: 18px;
-   margin-bottom: 22px;
-}
-
-.sobre-bg .intro {
-   font-size: 22px;
-   line-height: 1.6;
 }
