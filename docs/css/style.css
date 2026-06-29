@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
    margin: 0;
@@ -12,7 +13,10 @@ body {
    line-height: 1.7;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header {
    position: fixed;
    top: 0;
@@ -36,7 +40,6 @@ header h1 {
    font-weight: 400;
 }
 
-/* NAV */
 nav {
    display: flex;
    gap: 22px;
@@ -53,7 +56,10 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE PADRÃO */
+/* =========================
+   PÁGINAS PADRÃO
+========================= */
+
 .page {
    max-width: 900px;
    margin: auto;
@@ -100,7 +106,7 @@ p {
 }
 
 /* =========================
-   HOME FINAL (ESTÁVEL + TEXTO MAIS ALTO)
+   HOME (ESTÁVEL)
 ========================= */
 
 .home {
@@ -110,7 +116,6 @@ p {
    overflow: hidden;
 }
 
-/* VÍDEO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -122,28 +127,22 @@ p {
    height: 100%;
    object-fit: cover;
    object-position: center;
-   filter: brightness(0.65) contrast(1.05);
 }
 
-/* OVERLAY */
 .home::before {
    content: "";
    position: absolute;
    inset: 0;
    z-index: 2;
-   background: linear-gradient(
-      to right,
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.15)
-   );
+   background: rgba(0,0,0,0.4);
 }
 
-/* TEXTO (AGORA REALMENTE MAIS ALTO E FORÇADO) */
 .hero-text {
    position: absolute;
    z-index: 3;
-   top: 20vh !important;   /* 🔥 MAIS ALTO DE VERDADE */
+   top: 45%;
    left: 60px;
+   transform: translateY(-50%);
    max-width: 600px;
 }
 
@@ -158,7 +157,45 @@ p {
    margin-top: 15px;
 }
 
-/* RESPONSIVO */
+/* =========================
+   SOBRE COM FUNDO
+========================= */
+
+.sobre-bg {
+   position: relative;
+   max-width: 900px;
+   margin: auto;
+   padding: 120px 40px 80px 40px;
+
+   background-image: url("../img/imagem2.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.sobre-bg::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(0,0,0,0.65);
+   z-index: 1;
+}
+
+.sobre-bg h2,
+.sobre-bg p {
+   position: relative;
+   z-index: 2;
+}
+
+.sobre-bg .intro {
+   font-size: 22px;
+   line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
 @media (max-width: 900px) {
 
    header {
@@ -188,7 +225,7 @@ p {
    }
 
    .hero-text {
-      top: 18vh !important;
+      top: 45%;
       left: 25px;
       right: 25px;
    }
@@ -200,34 +237,4 @@ p {
    .hero-text .manifesto {
       font-size: 16px;
    }
-}
-
-
-/* SOBRE COM FUNDO GARANTIDO */
-.sobre-bg {
-   position: relative;
-   max-width: 900px;
-   margin: auto;
-   padding: 120px 40px 80px 40px;
-
-   background-image: url("../img/imagem2.jpg");
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-}
-
-/* overlay escuro */
-.sobre-bg::before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   background: rgba(0,0,0,0.65);
-   z-index: 1;
-}
-
-/* conteúdo acima do overlay */
-.sobre-bg h2,
-.sobre-bg p {
-   position: relative;
-   z-index: 2;
 }
