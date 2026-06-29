@@ -35,7 +35,6 @@ header h1 {
    font-weight: 400;
 }
 
-/* NAV */
 nav {
    display: flex;
    gap: 22px;
@@ -52,7 +51,7 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE PADRÃO */
+/* PAGE */
 .page {
    max-width: 900px;
    margin: auto;
@@ -99,7 +98,7 @@ p {
 }
 
 /* =========================
-   HOME FINAL AJUSTADA
+   HOME FINAL (ESTÁVEL)
 ========================= */
 
 .home {
@@ -137,13 +136,15 @@ p {
    );
 }
 
-/* TEXTO MAIS ALTO AGORA */
+/* TEXTO FORÇADO (AGORA VAI SUBIR DE VERDADE) */
 .hero-text {
-   position: absolute;
-   z-index: 3;
-   top: 15vh !important;   /* 🔥 MAIS ALTO AINDA */
-   left: 60px;
-   max-width: 600px;
+   position: absolute !important;
+   z-index: 9999 !important;
+
+   top: 80px !important;   /* 🔥 MAIS ALTO FIXO */
+   left: 60px !important;
+
+   max-width: 600px !important;
 }
 
 .hero-text .intro {
@@ -187,9 +188,9 @@ p {
    }
 
    .hero-text {
-      top: 12vh !important;
-      left: 25px;
-      right: 25px;
+      top: 60px !important;
+      left: 25px !important;
+      right: 25px !important;
    }
 
    .hero-text .intro {
