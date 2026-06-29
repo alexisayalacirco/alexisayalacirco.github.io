@@ -5,7 +5,6 @@
    overflow: hidden;
 }
 
-/* VÍDEO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -18,16 +17,14 @@
    object-fit: cover;
 }
 
-/* OVERLAY */
 .home::before {
    content: "";
    position: absolute;
    inset: 0;
-   z-index: 2;
    background: rgba(0,0,0,0.4);
+   z-index: 2;
 }
 
-/* TEXTO */
 .hero-text {
    position: absolute;
    z-index: 3;
@@ -39,30 +36,10 @@
 
 .hero-text .intro {
    font-size: 30px;
-   line-height: 1.3;
 }
 
 .hero-text .manifesto {
    font-size: 18px;
    margin-top: 15px;
    opacity: 0.9;
-}
-
-/* RESPONSIVO HOME */
-@media (max-width: 900px) {
-
-.hero-text {
-   left: 25px;
-   right: 25px;
-   top: 40%;
-}
-
-.hero-text .intro {
-   font-size: 22px;
-}
-
-.hero-text .manifesto {
-   font-size: 16px;
-}
-
 }
