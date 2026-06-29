@@ -1,1 +1,68 @@
+.home {
+   width: 100vw;
+   height: 100vh;
+   position: relative;
+   overflow: hidden;
+}
 
+/* VÍDEO */
+.hero-video {
+   position: absolute;
+   inset: 0;
+   z-index: 1;
+}
+
+.hero-video video {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* OVERLAY */
+.home::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+   background: rgba(0,0,0,0.4);
+}
+
+/* TEXTO */
+.hero-text {
+   position: absolute;
+   z-index: 3;
+   top: 38%;
+   left: 60px;
+   transform: translateY(-50%);
+   max-width: 600px;
+}
+
+.hero-text .intro {
+   font-size: 30px;
+   line-height: 1.3;
+}
+
+.hero-text .manifesto {
+   font-size: 18px;
+   margin-top: 15px;
+   opacity: 0.9;
+}
+
+/* RESPONSIVO HOME */
+@media (max-width: 900px) {
+
+.hero-text {
+   left: 25px;
+   right: 25px;
+   top: 40%;
+}
+
+.hero-text .intro {
+   font-size: 22px;
+}
+
+.hero-text .manifesto {
+   font-size: 16px;
+}
+
+}
