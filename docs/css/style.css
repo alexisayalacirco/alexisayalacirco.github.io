@@ -20,7 +20,7 @@ body {
 }
 
 /* =====================================
-   CABEÇALHO
+   CABEÇALHO FIXO
 ===================================== */
 
 header {
@@ -68,13 +68,15 @@ nav a:hover {
 }
 
 /* =====================================
-   PÁGINAS
+   PÁGINAS INTERNAS
 ===================================== */
 
 .page {
    max-width: 900px;
    margin: auto;
-   padding: 120px 40px 80px 40px;
+
+   padding: 140px 40px 80px 40px;
+
    text-align: center;
 }
 
@@ -119,18 +121,6 @@ li {
 }
 
 /* =====================================
-   VÍDEO
-===================================== */
-
-.hero-video video {
-    width: 100%;
-    display: block;
-    margin-top: 40px;
-
-    max-width: 750px;
-}
-
-/* =====================================
    BOTÃO
 ===================================== */
 
@@ -150,30 +140,102 @@ li {
 }
 
 /* =====================================
+   HOME (SEM COLUNAS + AJUSTADA)
+===================================== */
+
+.home {
+   min-height: 100vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   padding: 160px 40px 60px 40px;
+}
+
+.hero {
+   display: flex;
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: center;
+
+   text-align: center;
+
+   gap: 30px;
+
+   max-width: 900px;
+   width: 100%;
+}
+
+/* TEXTO */
+
+.hero-text {
+   max-width: 700px;
+}
+
+.hero-text .intro {
+   font-size: 20px;
+   line-height: 1.6;
+   margin-bottom: 18px;
+}
+
+.hero-text .manifesto {
+   font-size: 16px;
+   line-height: 1.6;
+   opacity: 0.9;
+}
+
+/* VÍDEO */
+
+.hero-video {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.hero-video video {
+   width: 100%;
+   max-width: 600px;
+   display: block;
+   margin-top: 30px;
+   object-fit: cover;
+   border-radius: 2px;
+}
+
+/* =====================================
    RESPONSIVO
 ===================================== */
 
 @media (max-width: 900px) {
 
    header {
-       flex-direction: column;
-       gap: 15px;
-       padding: 20px;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
    }
 
    nav {
-       flex-wrap: wrap;
-       justify-content: center;
-       gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
    }
 
    .page {
-       padding-top: 170px;
-       padding-left: 25px;
-       padding-right: 25px;
+      padding-top: 170px;
+      padding-left: 25px;
+      padding-right: 25px;
+   }
+
+   .home {
+      padding: 170px 25px 50px 25px;
    }
 
    h2 {
-       font-size: 32px;
+      font-size: 32px;
+   }
+
+   .hero-video video {
+      max-width: 100%;
    }
 }
