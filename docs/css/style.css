@@ -201,3 +201,33 @@ p {
       font-size: 16px;
    }
 }
+
+
+/* SOBRE COM FUNDO GARANTIDO */
+.sobre-bg {
+   position: relative;
+   max-width: 900px;
+   margin: auto;
+   padding: 120px 40px 80px 40px;
+
+   background-image: url("../img/imagem2.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+/* overlay escuro */
+.sobre-bg::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(0,0,0,0.65);
+   z-index: 1;
+}
+
+/* conteúdo acima do overlay */
+.sobre-bg h2,
+.sobre-bg p {
+   position: relative;
+   z-index: 2;
+}
