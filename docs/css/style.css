@@ -110,34 +110,27 @@ li {
    color: #111;
 }
 
-/* VIDEO PADRÃO */
-video {
-   width: 100%;
-   display: block;
-   margin-top: 40px;
-}
-
 /* =========================
-   HOME / HERO
+   HOME / HERO HÍBRIDO
 ========================= */
 
 .home {
    width: 100%;
-   height: 70vh; /* 🔥 reduzido de verdade */
+   height: 70vh;
    position: relative;
    overflow: hidden;
 }
 
 .hero {
    width: 100%;
-   height: 70vh; /* 🔥 reduzido de verdade */
+   height: 70vh;
    position: relative;
 }
 
 /* TEXTO */
 .hero-text {
    position: absolute;
-   z-index: 2;
+   z-index: 3;
    max-width: 600px;
    padding: 120px 60px;
 }
@@ -152,7 +145,7 @@ video {
 .hero-text .manifesto {
    font-size: 18px;
    font-weight: 300;
-   opacity: 0.85;
+   opacity: 0.9;
    max-width: 450px;
 }
 
@@ -166,11 +159,33 @@ video {
    z-index: 1;
 }
 
+/* 🎬 SOLUÇÃO HÍBRIDA */
 .hero-video video {
    width: 100%;
    height: 100%;
    object-fit: cover;
-   filter: contrast(1.05) brightness(0.7);
+
+   /* equilíbrio de estética e leitura */
+   object-position: center 40%;
+
+   filter: contrast(1.05) brightness(0.65);
+}
+
+/* 🔥 overlay suave para melhorar leitura do texto */
+.hero::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+
+   background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.15)
+   );
 }
 
 /* RESPONSIVO */
