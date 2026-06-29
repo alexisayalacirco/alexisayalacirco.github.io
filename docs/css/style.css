@@ -1,5 +1,4 @@
 
-/* RESET */
 * {
    margin: 0;
    padding: 0;
@@ -48,14 +47,21 @@ nav a {
    font-size: 14px;
 }
 
-/* HOME FULLSCREEN */
+/* =========================
+   HOME (FIX DEFINITIVO)
+========================= */
+
 .home {
    width: 100vw;
    height: 100vh;
    position: relative;
    overflow: hidden;
+
+   display: flex;
+   align-items: center; /* 🔥 força centralização real */
 }
 
+/* VÍDEO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -68,6 +74,7 @@ nav a {
    object-fit: cover;
 }
 
+/* overlay */
 .home::before {
    content: "";
    position: absolute;
@@ -76,16 +83,31 @@ nav a {
    background: rgba(0,0,0,0.4);
 }
 
+/* TEXTO (AGORA NÃO DESCE MAIS) */
 .hero-text {
-   position: absolute;
+   position: relative; /* 🔥 tira conflito com absolute */
    z-index: 3;
-   top: 50%;
-   transform: translateY(-50%);
-   left: 60px;
+
+   margin-left: 60px;
+
    max-width: 600px;
 }
 
-/* SOBRE FULLSCREEN */
+.hero-text .intro {
+   font-size: 28px;
+   line-height: 1.4;
+}
+
+.hero-text .manifesto {
+   font-size: 18px;
+   opacity: 0.9;
+   margin-top: 15px;
+}
+
+/* =========================
+   SOBRE
+========================= */
+
 .sobre-bg {
    position: relative;
    width: 100vw;
@@ -113,7 +135,22 @@ nav a {
    max-width: 900px;
 }
 
-/* TEXTOS */
-.intro {
-   font-size: 22px;
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+   header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+   }
+
+   nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+   }
+
+   .hero-text {
+      margin-left: 25px;
+   }
 }
