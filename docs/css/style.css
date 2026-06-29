@@ -106,7 +106,7 @@ p {
 }
 
 /* =========================
-   HOME (ESTÁVEL)
+   HOME FULLSCREEN
 ========================= */
 
 .home {
@@ -158,14 +158,15 @@ p {
 }
 
 /* =========================
-   SOBRE COM FUNDO
+   SOBRE FULLSCREEN
 ========================= */
 
 .sobre-bg {
    position: relative;
-   max-width: 900px;
-   margin: auto;
-   padding: 120px 40px 80px 40px;
+   width: 100%;
+   min-height: 100vh;
+
+   padding: 120px 60px;
 
    background-image: url("../img/imagem2.jpg");
    background-size: cover;
@@ -185,6 +186,7 @@ p {
 .sobre-bg p {
    position: relative;
    z-index: 2;
+   max-width: 900px;
 }
 
 .sobre-bg .intro {
