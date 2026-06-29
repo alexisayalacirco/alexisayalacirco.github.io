@@ -1,5 +1,4 @@
 
-/* RESET */
 * {
    margin: 0;
    padding: 0;
@@ -53,7 +52,7 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PÁGINAS INTERNAS */
+/* PÁGINAS */
 .page {
    max-width: 900px;
    margin: auto;
@@ -66,43 +65,12 @@ h2 {
    margin-bottom: 40px;
 }
 
-h3 {
-   font-size: 24px;
-   font-weight: 300;
-   margin-top: 45px;
-   margin-bottom: 18px;
-}
-
 p {
    margin-bottom: 22px;
    font-size: 18px;
 }
 
-.intro {
-   font-size: 22px;
-   line-height: 1.6;
-}
-
-/* BOTÃO */
-.button {
-   display: inline-block;
-   margin-top: 30px;
-   padding: 14px 24px;
-   border: 1px solid #f5f3ee;
-   color: #f5f3ee;
-   text-decoration: none;
-   transition: 0.3s;
-}
-
-.button:hover {
-   background: #f5f3ee;
-   color: #111;
-}
-
-/* =========================
-   HOME SIMPLES E ESTÁVEL
-========================= */
-
+/* HOME */
 .home {
    width: 100%;
    height: 100vh;
@@ -110,7 +78,7 @@ p {
    overflow: hidden;
 }
 
-/* VÍDEO */
+/* VÍDEO (NÃO MEXIDO) */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -124,7 +92,7 @@ p {
    object-position: center;
 }
 
-/* OVERLAY LEVE */
+/* OVERLAY */
 .home::before {
    content: "";
    position: absolute;
@@ -133,11 +101,12 @@ p {
    background: rgba(0,0,0,0.4);
 }
 
-/* TEXTO MAIS BAIXO (VERSÃO ORIGINAL SIMPLES) */
+/* TEXTO (SÓ AQUI MEXEMOS) */
 .hero-text {
    position: absolute;
    z-index: 3;
-   top: 45%;
+
+   top: 40%;              /* 🔥 subiu um pouco */
    left: 60px;
    transform: translateY(-50%);
    max-width: 600px;
@@ -184,16 +153,8 @@ p {
    }
 
    .hero-text {
-      top: 45%;
+      top: 38%; /* 🔥 ajuste leve no mobile também */
       left: 25px;
       right: 25px;
-   }
-
-   .hero-text .intro {
-      font-size: 22px;
-   }
-
-   .hero-text .manifesto {
-      font-size: 16px;
    }
 }
