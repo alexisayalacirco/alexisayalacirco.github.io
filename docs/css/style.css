@@ -98,7 +98,7 @@ li {
    margin-bottom: 12px;
 }
 
-/* VIDEO */
+/* VIDEO PADRÃO */
 video {
    width: 100%;
    display: block;
@@ -121,8 +121,70 @@ video {
    color: #111;
 }
 
+/* =========================
+   HOME / HERO CINEMATOGRÁFICO
+========================= */
+
+.home {
+   width: 100%;
+   height: 90vh; /* ajustado */
+   overflow: hidden;
+   position: relative;
+}
+
+.hero {
+   width: 100%;
+   height: 90vh; /* ajustado */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+}
+
+/* TEXTO SOBRE O VÍDEO */
+.hero-text {
+   position: absolute;
+   z-index: 2;
+   max-width: 600px;
+   padding: 120px 60px;
+}
+
+/* INTRO */
+.hero-text .intro {
+   font-size: 28px;
+   font-weight: 300;
+   line-height: 1.4;
+   margin-bottom: 20px;
+}
+
+/* MANIFESTO */
+.hero-text .manifesto {
+   font-size: 18px;
+   font-weight: 300;
+   opacity: 0.85;
+   max-width: 450px;
+}
+
+/* VÍDEO FUNDO */
+.hero-video {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+
+.hero-video video {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: contrast(1.05) brightness(0.7);
+}
+
 /* RESPONSIVO */
 @media (max-width: 900px) {
+
    header {
        flex-direction: column;
        gap: 15px;
@@ -146,6 +208,18 @@ video {
    }
 
    p {
+       font-size: 16px;
+   }
+
+   .hero-text {
+       padding: 140px 25px 40px 25px;
+   }
+
+   .hero-text .intro {
+       font-size: 22px;
+   }
+
+   .hero-text .manifesto {
        font-size: 16px;
    }
 }
