@@ -1,21 +1,17 @@
-
 .sobre {
    width: 100vw;
    height: 100vh;
    position: relative;
 
-   background-image: url("../img/imagem2.jpg");
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
+   background: url("../img/imagem2.jpg") center center / cover no-repeat;
 }
 
-/* overlay escuro para leitura */
+/* camada escura para leitura do texto */
 .sobre::before {
    content: "";
    position: absolute;
    inset: 0;
-   background: rgba(0,0,0,0.65);
+   background: rgba(0, 0, 0, 0.65);
    z-index: 1;
 }
 
@@ -31,16 +27,18 @@
    color: #f5f3ee;
 }
 
+/* título */
 .sobre-texto h2 {
    font-size: 42px;
    font-weight: 300;
    margin-bottom: 30px;
 }
 
+/* texto principal */
 .sobre-texto .intro {
    font-size: 22px;
-   margin-bottom: 20px;
    line-height: 1.5;
+   margin-bottom: 20px;
 }
 
 .sobre-texto p {
@@ -51,20 +49,19 @@
 /* RESPONSIVO */
 @media (max-width: 900px) {
 
-.sobre-texto {
-   padding: 140px 25px;
-}
+   .sobre-texto {
+      padding: 140px 25px;
+   }
 
-.sobre-texto h2 {
-   font-size: 32px;
-}
+   .sobre-texto h2 {
+      font-size: 32px;
+   }
 
-.sobre-texto .intro {
-   font-size: 18px;
-}
+   .sobre-texto .intro {
+      font-size: 18px;
+   }
 
-.sobre-texto p {
-   font-size: 16px;
-}
-
+   .sobre-texto p {
+      font-size: 16px;
+   }
 }
