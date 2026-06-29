@@ -12,10 +12,7 @@ body {
    line-height: 1.7;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 header {
    position: fixed;
    top: 0;
@@ -50,30 +47,17 @@ nav a {
    font-size: 14px;
 }
 
-nav a:hover {
-   color: #bbbbbb;
-}
-
-/* =========================
-   PÁGINAS INTERNAS
-========================= */
-
+/* PÁGINAS INTERNAS */
 .page {
    max-width: 900px;
    margin: auto;
-   padding: 120px 40px 80px 40px;
+   padding: 120px 40px 80px;
 }
 
 h2 {
    font-size: 40px;
    font-weight: 300;
    margin-bottom: 40px;
-}
-
-h3 {
-   font-size: 24px;
-   font-weight: 300;
-   margin: 45px 0 18px;
 }
 
 p {
@@ -83,7 +67,6 @@ p {
 
 .intro {
    font-size: 22px;
-   line-height: 1.6;
 }
 
 /* BOTÃO */
@@ -96,26 +79,11 @@ p {
    text-decoration: none;
 }
 
-.button:hover {
-   background: #f5f3ee;
-   color: #111;
-}
-
-/* =========================
-   RESPONSIVO GERAL
-========================= */
-
+/* RESPONSIVO */
 @media (max-width: 900px) {
 
 header {
    flex-direction: column;
-   gap: 15px;
-   padding: 20px;
-}
-
-nav {
-   flex-wrap: wrap;
-   justify-content: center;
    gap: 15px;
 }
 
