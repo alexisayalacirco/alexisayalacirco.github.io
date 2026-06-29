@@ -1,4 +1,4 @@
-
+/* RESET */
 * {
    margin: 0;
    padding: 0;
@@ -36,6 +36,7 @@ header h1 {
    font-weight: 400;
 }
 
+/* NAV */
 nav {
    display: flex;
    gap: 22px;
@@ -52,7 +53,7 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PÁGINAS */
+/* PAGE PADRÃO */
 .page {
    max-width: 900px;
    margin: auto;
@@ -65,12 +66,43 @@ h2 {
    margin-bottom: 40px;
 }
 
+h3 {
+   font-size: 24px;
+   font-weight: 300;
+   margin-top: 45px;
+   margin-bottom: 18px;
+}
+
 p {
    margin-bottom: 22px;
    font-size: 18px;
 }
 
-/* HOME */
+.intro {
+   font-size: 22px;
+   line-height: 1.6;
+}
+
+/* BOTÃO */
+.button {
+   display: inline-block;
+   margin-top: 30px;
+   padding: 14px 24px;
+   border: 1px solid #f5f3ee;
+   color: #f5f3ee;
+   text-decoration: none;
+   transition: 0.3s;
+}
+
+.button:hover {
+   background: #f5f3ee;
+   color: #111;
+}
+
+/* =========================
+   HOME FINAL (ESTÁVEL + TEXTO MAIS ALTO)
+========================= */
+
 .home {
    width: 100%;
    height: 100vh;
@@ -78,7 +110,7 @@ p {
    overflow: hidden;
 }
 
-/* VÍDEO (NÃO MEXIDO) */
+/* VÍDEO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -90,6 +122,7 @@ p {
    height: 100%;
    object-fit: cover;
    object-position: center;
+   filter: brightness(0.65) contrast(1.05);
 }
 
 /* OVERLAY */
@@ -98,17 +131,19 @@ p {
    position: absolute;
    inset: 0;
    z-index: 2;
-   background: rgba(0,0,0,0.4);
+   background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.15)
+   );
 }
 
-/* TEXTO (SÓ AQUI MEXEMOS) */
+/* TEXTO (AGORA REALMENTE MAIS ALTO E FORÇADO) */
 .hero-text {
    position: absolute;
    z-index: 3;
-
-   top: 40%;              /* 🔥 subiu um pouco */
+   top: 20vh !important;   /* 🔥 MAIS ALTO DE VERDADE */
    left: 60px;
-   transform: translateY(-50%);
    max-width: 600px;
 }
 
@@ -153,8 +188,16 @@ p {
    }
 
    .hero-text {
-      top: 38%; /* 🔥 ajuste leve no mobile também */
+      top: 18vh !important;
       left: 25px;
       right: 25px;
+   }
+
+   .hero-text .intro {
+      font-size: 22px;
+   }
+
+   .hero-text .manifesto {
+      font-size: 16px;
    }
 }
