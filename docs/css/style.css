@@ -3,49 +3,48 @@
 ===================================== */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 /* =====================================
-   BASE
+   GERAL
 ===================================== */
 
 body {
-    background-color: #111;
-    color: #f5f3ee;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
+   background-color: #111;
+   color: #f5f3ee;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.7;
 }
 
 /* =====================================
-   HEADER FIXO
+   CABEÇALHO
 ===================================== */
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: rgba(17, 17, 17, 0.95);
 
-    background: rgba(17, 17, 17, 0.95);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   padding: 18px 40px;
 
-    padding: 18px 40px;
+   border-bottom: 1px solid #2a2a2a;
 
-    border-bottom: 1px solid #2a2a2a;
-
-    z-index: 1000;
+   z-index: 1000;
 }
 
 header h1 {
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 1px;
+   font-size: 18px;
+   font-weight: 400;
+   letter-spacing: 1px;
 }
 
 /* =====================================
@@ -53,64 +52,80 @@ header h1 {
 ===================================== */
 
 nav {
-    display: flex;
-    gap: 22px;
+   display: flex;
+   gap: 22px;
 }
 
 nav a {
-    color: #f5f3ee;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color .3s;
+   color: #f5f3ee;
+   text-decoration: none;
+   font-size: 14px;
+   transition: 0.3s;
 }
 
 nav a:hover {
-    color: #bbbbbb;
+   color: #bbbbbb;
 }
 
 /* =====================================
-   PÁGINAS INTERNAS (IMPORTANTE)
+   PÁGINAS
 ===================================== */
 
 .page {
-    max-width: 900px;
-    margin: 0 auto;
-
-    padding: 140px 40px 80px 40px;
-
-    text-align: center;
+   max-width: 900px;
+   margin: auto;
+   padding: 120px 40px 80px 40px;
+   text-align: center;
 }
 
 /* =====================================
-   TEXTOS GERAIS
+   TÍTULOS
 ===================================== */
 
 h2 {
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 40px;
+   font-size: 40px;
+   font-weight: 300;
+   margin-bottom: 40px;
 }
 
 h3 {
-    font-size: 24px;
-    font-weight: 300;
-    margin-top: 45px;
-    margin-bottom: 18px;
+   font-size: 24px;
+   font-weight: 300;
+   margin-top: 45px;
+   margin-bottom: 18px;
 }
+
+/* =====================================
+   TEXTO
+===================================== */
 
 p {
-    font-size: 18px;
-    margin-bottom: 22px;
+   margin-bottom: 22px;
+   font-size: 18px;
 }
 
+/* =====================================
+   LISTAS
+===================================== */
+
 ul {
-    margin-top: 20px;
-    margin-left: 22px;
-    text-align: left;
+   margin-left: 22px;
+   margin-top: 20px;
+   text-align: left;
 }
 
 li {
-    margin-bottom: 12px;
+   margin-bottom: 12px;
+}
+
+/* =====================================
+   VÍDEO
+===================================== */
+
+video {
+   width: 100%;
+   display: block;
+   margin-top: 40px;
 }
 
 /* =====================================
@@ -118,82 +133,18 @@ li {
 ===================================== */
 
 .button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 24px;
-    border: 1px solid #f5f3ee;
-    color: #f5f3ee;
-    text-decoration: none;
-    transition: .3s;
+   display: inline-block;
+   margin-top: 30px;
+   padding: 14px 24px;
+   border: 1px solid #f5f3ee;
+   color: #f5f3ee;
+   text-decoration: none;
+   transition: 0.3s;
 }
 
 .button:hover {
-    background: #f5f3ee;
-    color: #111;
-}
-
-/* =====================================
-   HOME (CORRETA - SEM COLUNAS)
-===================================== */
-
-.home {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 140px 40px 60px 40px;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    gap: 30px;
-
-    max-width: 900px;
-    width: 100%;
-}
-
-/* TEXTO */
-
-.hero-text {
-    max-width: 700px;
-}
-
-.hero-text .intro {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 18px;
-}
-
-.hero-text .manifesto {
-    font-size: 16px;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-/* VÍDEO */
-
-.hero-video {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-video video {
-    width: 100%;
-    max-width: 650px;
-    max-height: 420px;
-
-    object-fit: cover;
-    border-radius: 2px;
+   background: #f5f3ee;
+   color: #111;
 }
 
 /* =====================================
@@ -202,36 +153,25 @@ li {
 
 @media (max-width: 900px) {
 
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
+   header {
+       flex-direction: column;
+       gap: 15px;
+       padding: 20px;
+   }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
+   nav {
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 15px;
+   }
 
-    .page {
-        padding: 160px 25px 60px 25px;
-    }
+   .page {
+       padding-top: 170px;
+       padding-left: 25px;
+       padding-right: 25px;
+   }
 
-    .home {
-        padding: 140px 25px 50px 25px;
-    }
-
-    .hero-text .intro {
-        font-size: 18px;
-    }
-
-    .hero-text .manifesto {
-        font-size: 15px;
-    }
-
-    .hero-video video {
-        max-width: 100%;
-        max-height: 300px;
-    }
+   h2 {
+       font-size: 32px;
+   }
 }
