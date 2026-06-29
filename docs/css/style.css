@@ -100,7 +100,7 @@ p {
 }
 
 /* =========================
-   HOME CINEMATOGRÁFICA
+   HOME FINAL (ESTÁVEL + TEXTO MAIS ALTO)
 ========================= */
 
 .home {
@@ -138,11 +138,11 @@ p {
    );
 }
 
-/* TEXTO (AGORA REALMENTE MAIS ALTO) */
+/* TEXTO (AGORA REALMENTE MAIS ALTO E FORÇADO) */
 .hero-text {
    position: absolute;
    z-index: 3;
-   top: 30%;   /* 🔥 AQUI está o ajuste real */
+   top: 20vh !important;   /* 🔥 MAIS ALTO DE VERDADE */
    left: 60px;
    max-width: 600px;
 }
@@ -188,7 +188,7 @@ p {
    }
 
    .hero-text {
-      top: 28%;
+      top: 18vh !important;
       left: 25px;
       right: 25px;
    }
