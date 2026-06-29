@@ -1,4 +1,5 @@
 
+/* RESET */
 * {
    margin: 0;
    padding: 0;
@@ -12,7 +13,10 @@ body {
    line-height: 1.7;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header {
    position: fixed;
    top: 0;
@@ -48,7 +52,7 @@ nav a {
 }
 
 /* =========================
-   HOME (FIX DEFINITIVO)
+   HOME (ESTÁVEL)
 ========================= */
 
 .home {
@@ -56,12 +60,8 @@ nav a {
    height: 100vh;
    position: relative;
    overflow: hidden;
-
-   display: flex;
-   align-items: center; /* 🔥 força centralização real */
 }
 
-/* VÍDEO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -74,7 +74,6 @@ nav a {
    object-fit: cover;
 }
 
-/* overlay */
 .home::before {
    content: "";
    position: absolute;
@@ -83,13 +82,14 @@ nav a {
    background: rgba(0,0,0,0.4);
 }
 
-/* TEXTO (AGORA NÃO DESCE MAIS) */
 .hero-text {
-   position: relative; /* 🔥 tira conflito com absolute */
+   position: absolute;
    z-index: 3;
 
-   margin-left: 60px;
+   top: 40%;
+   left: 60px;
 
+   transform: translateY(-50%);
    max-width: 600px;
 }
 
@@ -105,7 +105,7 @@ nav a {
 }
 
 /* =========================
-   SOBRE
+   SOBRE FULLSCREEN
 ========================= */
 
 .sobre-bg {
@@ -118,6 +118,7 @@ nav a {
    background-image: url("../img/imagem2.jpg");
    background-size: cover;
    background-position: center;
+   background-repeat: no-repeat;
 }
 
 .sobre-bg::before {
@@ -135,7 +136,14 @@ nav a {
    max-width: 900px;
 }
 
-/* RESPONSIVO */
+.sobre-bg .intro {
+   font-size: 22px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
 @media (max-width: 900px) {
 
    header {
@@ -151,6 +159,8 @@ nav a {
    }
 
    .hero-text {
-      margin-left: 25px;
+      left: 25px;
+      right: 25px;
+      top: 45%;
    }
 }
