@@ -1,3 +1,4 @@
+/* RESET */
 * {
    margin: 0;
    padding: 0;
@@ -9,7 +10,6 @@ body {
    color: #f5f3ee;
    font-family: Arial, Helvetica, sans-serif;
    line-height: 1.7;
-   overflow-x: hidden;
 }
 
 /* HEADER */
@@ -36,7 +36,6 @@ header h1 {
    font-weight: 400;
 }
 
-/* NAV */
 nav {
    display: flex;
    gap: 22px;
@@ -53,14 +52,13 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE */
+/* PAGE PADRÃO */
 .page {
    max-width: 900px;
    margin: auto;
    padding: 120px 40px 80px 40px;
 }
 
-/* TEXTOS */
 h2 {
    font-size: 40px;
    font-weight: 300;
@@ -84,16 +82,6 @@ p {
    line-height: 1.6;
 }
 
-/* LISTAS */
-ul {
-   margin-left: 22px;
-   margin-top: 20px;
-}
-
-li {
-   margin-bottom: 12px;
-}
-
 /* BOTÃO */
 .button {
    display: inline-block;
@@ -111,121 +99,105 @@ li {
 }
 
 /* =========================
-   HOME / HERO HÍBRIDO
+   HOME FINAL ESTÁVEL
 ========================= */
 
 .home {
    width: 100%;
-   height: 70vh;
+   height: 100vh;
    position: relative;
    overflow: hidden;
 }
 
-.hero {
-   width: 100%;
-   height: 70vh;
-   position: relative;
-}
-
-/* TEXTO */
-.hero-text {
-   position: absolute;
-   z-index: 3;
-   max-width: 600px;
-   padding: 120px 60px;
-}
-
-.hero-text .intro {
-   font-size: 28px;
-   font-weight: 300;
-   line-height: 1.4;
-   margin-bottom: 20px;
-}
-
-.hero-text .manifesto {
-   font-size: 18px;
-   font-weight: 300;
-   opacity: 0.9;
-   max-width: 450px;
-}
-
-/* VÍDEO */
+/* vídeo fundo */
 .hero-video {
    position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+   inset: 0;
    z-index: 1;
 }
 
-/* 🎬 SOLUÇÃO HÍBRIDA */
 .hero-video video {
    width: 100%;
    height: 100%;
    object-fit: cover;
-
-   /* equilíbrio de estética e leitura */
-   object-position: center 40%;
-
-   filter: contrast(1.05) brightness(0.65);
+   object-position: center;
+   filter: brightness(0.65) contrast(1.05);
 }
 
-/* 🔥 overlay suave para melhorar leitura do texto */
-.hero::before {
+/* overlay escuro */
+.home::before {
    content: "";
    position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+   inset: 0;
    z-index: 2;
-
    background: linear-gradient(
       to right,
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.15)
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.1)
    );
+}
+
+/* texto */
+.hero-text {
+   position: absolute;
+   z-index: 3;
+   top: 50%;
+   left: 60px;
+   transform: translateY(-50%);
+   max-width: 600px;
+}
+
+.hero-text .intro {
+   font-size: 28px;
+   line-height: 1.4;
+}
+
+.hero-text .manifesto {
+   font-size: 18px;
+   opacity: 0.9;
+   margin-top: 15px;
 }
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
 
    header {
-       flex-direction: column;
-       gap: 15px;
-       padding: 20px;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
    }
 
    nav {
-       flex-wrap: wrap;
-       justify-content: center;
-       gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
    }
 
    .page {
-       padding-top: 170px;
-       padding-left: 25px;
-       padding-right: 25px;
+      padding-top: 170px;
+      padding-left: 25px;
+      padding-right: 25px;
    }
 
    h2 {
-       font-size: 32px;
+      font-size: 32px;
    }
 
    p {
-       font-size: 16px;
+      font-size: 16px;
    }
 
    .hero-text {
-       padding: 140px 25px 40px 25px;
+      left: 25px;
+      right: 25px;
+      transform: translateY(-50%);
    }
 
    .hero-text .intro {
-       font-size: 22px;
+      font-size: 22px;
    }
 
    .hero-text .manifesto {
-       font-size: 16px;
+      font-size: 16px;
    }
 }
