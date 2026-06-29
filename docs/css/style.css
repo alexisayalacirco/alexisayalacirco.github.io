@@ -36,6 +36,7 @@ header h1 {
    font-weight: 400;
 }
 
+/* NAV */
 nav {
    display: flex;
    gap: 22px;
@@ -52,13 +53,14 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE PADRÃO */
+/* PAGE */
 .page {
    max-width: 900px;
    margin: auto;
    padding: 120px 40px 80px 40px;
 }
 
+/* TEXTOS */
 h2 {
    font-size: 40px;
    font-weight: 300;
@@ -99,7 +101,7 @@ p {
 }
 
 /* =========================
-   HOME FINAL ESTÁVEL
+   HOME CINEMATOGRÁFICA FINAL
 ========================= */
 
 .home {
@@ -109,7 +111,7 @@ p {
    overflow: hidden;
 }
 
-/* vídeo fundo */
+/* VÍDEO FUNDO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -124,7 +126,7 @@ p {
    filter: brightness(0.65) contrast(1.05);
 }
 
-/* overlay escuro */
+/* OVERLAY */
 .home::before {
    content: "";
    position: absolute;
@@ -137,11 +139,11 @@ p {
    );
 }
 
-/* texto */
+/* TEXTO (AJUSTADO MAIS PARA CIMA) */
 .hero-text {
    position: absolute;
    z-index: 3;
-   top: 50%;
+   top: 38%;              /* 🔥 ajuste feito aqui */
    left: 60px;
    transform: translateY(-50%);
    max-width: 600px;
@@ -190,6 +192,7 @@ p {
    .hero-text {
       left: 25px;
       right: 25px;
+      top: 38%;
       transform: translateY(-50%);
    }
 
