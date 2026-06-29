@@ -1,28 +1,20 @@
-/* =====================================
-   RESET
-===================================== */
-
+/* RESET */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
-/* =====================================
-   GERAL
-===================================== */
-
+/* BODY */
 body {
    background-color: #111;
    color: #f5f3ee;
    font-family: Arial, Helvetica, sans-serif;
    line-height: 1.7;
+   overflow-x: hidden;
 }
 
-/* =====================================
-   CABEÇALHO FIXO
-===================================== */
-
+/* HEADER */
 header {
    position: fixed;
    top: 0;
@@ -44,13 +36,9 @@ header {
 header h1 {
    font-size: 18px;
    font-weight: 400;
-   letter-spacing: 1px;
 }
 
-/* =====================================
-   MENU
-===================================== */
-
+/* NAV */
 nav {
    display: flex;
    gap: 22px;
@@ -67,27 +55,19 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* =====================================
-   PÁGINAS INTERNAS
-===================================== */
-
+/* PAGE CONTAINER */
 .page {
    max-width: 900px;
    margin: auto;
-
-   padding: 140px 40px 80px 40px;
-
-   text-align: center;
+   padding: 120px 40px 80px 40px;
 }
 
-/* =====================================
-   TÍTULOS
-===================================== */
-
+/* TITLES */
 h2 {
    font-size: 40px;
    font-weight: 300;
    margin-bottom: 40px;
+   letter-spacing: 0.5px;
 }
 
 h3 {
@@ -97,33 +77,35 @@ h3 {
    margin-bottom: 18px;
 }
 
-/* =====================================
-   TEXTO
-===================================== */
-
+/* TEXT */
 p {
    margin-bottom: 22px;
    font-size: 18px;
 }
 
-/* =====================================
-   LISTAS
-===================================== */
+.intro {
+   font-size: 22px;
+   line-height: 1.6;
+}
 
+/* LISTS */
 ul {
    margin-left: 22px;
    margin-top: 20px;
-   text-align: left;
 }
 
 li {
    margin-bottom: 12px;
 }
 
-/* =====================================
-   BOTÃO
-===================================== */
+/* VIDEO */
+video {
+   width: 100%;
+   display: block;
+   margin-top: 40px;
+}
 
+/* BUTTON */
 .button {
    display: inline-block;
    margin-top: 30px;
@@ -139,103 +121,31 @@ li {
    color: #111;
 }
 
-/* =====================================
-   HOME (SEM COLUNAS + AJUSTADA)
-===================================== */
-
-.home {
-   min-height: 100vh;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-   padding: 160px 40px 60px 40px;
-}
-
-.hero {
-   display: flex;
-   flex-direction: column;
-
-   align-items: center;
-   justify-content: center;
-
-   text-align: center;
-
-   gap: 30px;
-
-   max-width: 900px;
-   width: 100%;
-}
-
-/* TEXTO */
-
-.hero-text {
-   max-width: 700px;
-}
-
-.hero-text .intro {
-   font-size: 20px;
-   line-height: 1.6;
-   margin-bottom: 18px;
-}
-
-.hero-text .manifesto {
-   font-size: 16px;
-   line-height: 1.6;
-   opacity: 0.9;
-}
-
-/* VÍDEO */
-
-.hero-video {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-}
-
-.hero-video video {
-   width: 100%;
-   max-width: 600px;
-   display: block;
-   margin-top: 30px;
-   object-fit: cover;
-   border-radius: 2px;
-}
-
-/* =====================================
-   RESPONSIVO
-===================================== */
-
+/* RESPONSIVO */
 @media (max-width: 900px) {
-
    header {
-      flex-direction: column;
-      gap: 15px;
-      padding: 20px;
+       flex-direction: column;
+       gap: 15px;
+       padding: 20px;
    }
 
    nav {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 15px;
    }
 
    .page {
-      padding-top: 170px;
-      padding-left: 25px;
-      padding-right: 25px;
-   }
-
-   .home {
-      padding: 170px 25px 50px 25px;
+       padding-top: 170px;
+       padding-left: 25px;
+       padding-right: 25px;
    }
 
    h2 {
-      font-size: 32px;
+       font-size: 32px;
    }
 
-   .hero-video video {
-      max-width: 100%;
+   p {
+       font-size: 16px;
    }
 }
