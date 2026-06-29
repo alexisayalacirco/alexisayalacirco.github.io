@@ -3,10 +3,13 @@
    height: 100vh;
    position: relative;
 
-   background: url("../img/imagem2.jpg") center center / cover no-repeat;
+   background-image: url("../img/imagem2.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 
-/* camada escura para leitura do texto */
+/* camada escura por cima da imagem */
 .sobre::before {
    content: "";
    position: absolute;
@@ -15,7 +18,7 @@
    z-index: 1;
 }
 
-/* bloco de texto */
+/* área do texto */
 .sobre-texto {
    position: relative;
    z-index: 2;
