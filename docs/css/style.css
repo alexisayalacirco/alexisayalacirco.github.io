@@ -53,14 +53,13 @@ nav a:hover {
    color: #bbbbbb;
 }
 
-/* PAGE */
+/* PAGE PADRÃO */
 .page {
    max-width: 900px;
    margin: auto;
    padding: 120px 40px 80px 40px;
 }
 
-/* TEXTOS */
 h2 {
    font-size: 40px;
    font-weight: 300;
@@ -101,7 +100,7 @@ p {
 }
 
 /* =========================
-   HOME CINEMATOGRÁFICA FINAL
+   HOME CINEMATOGRÁFICA
 ========================= */
 
 .home {
@@ -111,7 +110,7 @@ p {
    overflow: hidden;
 }
 
-/* VÍDEO FUNDO */
+/* VÍDEO */
 .hero-video {
    position: absolute;
    inset: 0;
@@ -135,17 +134,16 @@ p {
    background: linear-gradient(
       to right,
       rgba(0,0,0,0.65),
-      rgba(0,0,0,0.1)
+      rgba(0,0,0,0.15)
    );
 }
 
-/* TEXTO (AJUSTADO MAIS PARA CIMA) */
+/* TEXTO (AGORA REALMENTE MAIS ALTO) */
 .hero-text {
    position: absolute;
    z-index: 3;
-   top: 38%;              /* 🔥 ajuste feito aqui */
+   top: 30%;   /* 🔥 AQUI está o ajuste real */
    left: 60px;
-   transform: translateY(-50%);
    max-width: 600px;
 }
 
@@ -190,10 +188,9 @@ p {
    }
 
    .hero-text {
+      top: 28%;
       left: 25px;
       right: 25px;
-      top: 38%;
-      transform: translateY(-50%);
    }
 
    .hero-text .intro {
